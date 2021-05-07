@@ -47,7 +47,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private JwtDecoder jwtDecoder() {
         OAuth2TokenValidator<Jwt> withAudience =
-                new AudienceValidator(audience);
+                new ku.product.config.AudienceValidator(audience);
 
         OAuth2TokenValidator<Jwt> withIssuer =
                 JwtValidators.createDefaultWithIssuer(issuer);
